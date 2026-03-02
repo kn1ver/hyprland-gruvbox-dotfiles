@@ -1,0 +1,127 @@
+{
+  "layer": "top",
+  "modules-left": [
+    "custom/launcher",
+    "wireplumber",
+    "hyprland/window",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/previous",
+    "mpris",
+    "custom/next"
+  ],
+  "modules-right": [
+    "clock",
+    "bluetooth",
+    "hyprland/language",
+    "custom/power"
+  ],
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/powermenu.sh"
+  },
+  "hyprland/language": {
+    "format": "{short}",
+    "tooltip": false
+  },
+  "custom/previous": {
+    "exec": "playerctl -l 2>/dev/null | grep -q '^spotify$' && echo ''",
+    "interval": 1,
+    "on-click": "playerctl -p spotify previous"
+  },
+  "custom/next": {
+    "exec": "playerctl -l 2>/dev/null | grep -q '^spotify$' && echo ''",
+    "interval": 1,
+    "on-click": "playerctl -p spotify next"
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-disabled": "󰂲 Off",
+    "tooltip-format": "{controller_alias}\n{num_connections} connected",
+    "on-click": "blueman-manager"
+  },
+  "hyprland/window": {
+    "format": "{initialTitle}",
+    "max-length": 50
+  },
+  "mpris": {
+    "player": "spotify",
+    "format": "<span size='17000'> </span> {artist} - {title}",
+    "max-length": 60
+  },
+  "wireplumber": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 {volume}%",
+    "on-click": "pavucontrol",
+    "format-icons": {
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
+    }
+  },
+  "network": {
+    "tooltip": false,
+    "format-wifi": "  {essid}",
+    "format-ethernet": "",
+    "on-click": "kitty -- nmtui"
+  },
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "format-alt": "{:%m-%d-%Y}",
+    "interval": 1
+  },
+  "cpu": {
+    "interval": 15,
+    "format": " {}%",
+    "max-length": 10,
+    "on-click": "kitty -- btop"
+  },
+  "memory": {
+    "interval": 15,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "custom/media": {
+    "interval": 30,
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 20,
+    "format-icons": {
+      "spotify": " ",
+      "default": " "
+    },
+    "escape": true,
+    "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
+    "on-click": "playerctl play-pause"
+  },
+  "custom/launcher": {
+    "format": "",
+    "on-click": "sh ~/.config/rofi/launchers/type-2/launcher.sh",
+    "on-click-right": "killall rofi"
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10"
+    },
+    "active": "",
+    "sort-by-number": true
+  }
+}

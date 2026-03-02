@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Happ
+Exec=/opt/happ/bin/Happ %f
+Icon=/home/kn1ver/.local/share/icons/Gruvbox-Plus-Dark/apps/32@2x/com.github.kmal-kenneth.monilet.svg
+MimeType=application/x-happ;application/json;
+Categories=Utility;
+Terminal=false

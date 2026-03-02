@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Syncthing
+Comment=Sync Folders
+Exec=syncthing
+Icon=com.visualstudio.code.oss
+Type=Application
+Categories=files

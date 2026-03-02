@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Meridius
+Exec=/opt/Meridius/meridius
+Terminal=false
+Type=Application
+Icon=/home/kn1ver/.local/share/icons/Gruvbox-Plus-Dark/apps/32@2x/applications-arcade.svg
+Comment=Music Player for VK based on Electron, NuxtJS, Vue
+Categories=Audio;Music;Player;AudioVideo;
