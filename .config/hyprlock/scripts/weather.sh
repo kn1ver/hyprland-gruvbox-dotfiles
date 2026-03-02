@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # CONFIG
-API_KEY="5c6eb2b477ee4dd294541bfa37a75fd9"
+API_KEY=""
 CITY="Tolyatti"
 UNITS="metric"
 LANG="ru"
