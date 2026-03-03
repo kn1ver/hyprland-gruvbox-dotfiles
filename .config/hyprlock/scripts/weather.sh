@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # CONFIG
-API_KEY=""
-CITY="Tolyatti"
+API_KEY="$1"
+CITY="$2"
 UNITS="metric"
-LANG="ru"
+LANG="en"
 
 CACHE_DIR="$HOME/.cache/openweather"
 DATA_CACHE="$CACHE_DIR/weather.txt"
